@@ -1,0 +1,13 @@
+[Libraries]
+[Libraries/*]
+Temp/
+Library/
+Logs/
+obj/
+MemoryCaptures/
+Build/
+*.csproj
+*.unityproj
+*.sln
+*.user
+
