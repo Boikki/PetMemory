@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;  // 要跟随的目标
-    public Vector3 offset = new Vector3(0, 5, -10);
+    public Transform target; // 要跟随的目标
+    public Vector3 offset = new(0, 5, -10);
     public float followSpeed = 5f;
 
     private void LateUpdate()
     {
         if (target == null) return;
 
-        Vector3 desiredPosition = target.position + offset;
+        var desiredPosition = target.position + offset;
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * followSpeed);
         transform.LookAt(target);
     }

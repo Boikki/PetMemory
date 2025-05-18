@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LookeeController : MonoBehaviour
 {
-    [Header("漂浮设置")]
-    public float floatAmplitude = 0.2f;     // 浮动高度
-    public float floatFrequency = 1f;        // 浮动速度
+    [Header("漂浮设置")] public float floatAmplitude = 0.2f; // 浮动高度
 
-    [Header("动画")]
-    public Animator animator;               // 动画控制器
+    public float floatFrequency = 1f; // 浮动速度
 
-    [Header("音效")]
-    public AudioSource audioSource;         // 音效播放器
-    public AudioClip greetClip;             // 打招呼音效
+    [Header("动画")] public Animator animator; // 动画控制器
+
+    [Header("音效")] public AudioSource audioSource; // 音效播放器
+
+    public AudioClip greetClip; // 打招呼音效
 
     private Vector3 startPos;
 
@@ -25,7 +22,7 @@ public class LookeeController : MonoBehaviour
     private void Update()
     {
         // 上下浮动
-        float yOffset = floatAmplitude * Mathf.Sin(Time.time * floatFrequency);
+        var yOffset = floatAmplitude * Mathf.Sin(Time.time * floatFrequency);
         transform.position = new Vector3(startPos.x, startPos.y + yOffset, startPos.z);
     }
 
@@ -36,14 +33,8 @@ public class LookeeController : MonoBehaviour
 
     public void PlayGreet()
     {
-        if (animator != null)
-        {
-            animator.SetTrigger("Greet");
-        }
+        if (animator != null) animator.SetTrigger("Greet");
 
-        if (audioSource != null && greetClip != null)
-        {
-            audioSource.PlayOneShot(greetClip);
-        }
+        if (audioSource != null && greetClip != null) audioSource.PlayOneShot(greetClip);
     }
 }
