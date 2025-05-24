@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7179028233949072575}
   - component: {fileID: 3269238709689233176}
   - component: {fileID: 7201368002139137022}
-  - component: {fileID: 8647685751667172136}
+  - component: {fileID: 5981891069128890348}
   m_Layer: 0
   m_Name: MemoryBall
   m_TagString: Untagged
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8647685751667172136
+--- !u!114 &5981891069128890348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,6 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 222920136551618552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7a638f74925814d856e78e7bd7b139, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c3109bafd71c594a831c05ed8a8431a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  memoryText: "\u4ECA\u5929\u6211\u5F88\u5F00\u5FC3\uFF01"
+  memoryImage: {fileID: 0}
+  floatAmplitude: 0.2
+  floatSpeed: 1
+  rotationSpeed: 20
